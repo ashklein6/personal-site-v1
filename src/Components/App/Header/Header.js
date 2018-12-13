@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import './Header.css';
 import Typing from 'react-typing-animation';
 import Fade from 'react-reveal/Fade';
 
@@ -33,7 +32,8 @@ const styles = {
     color: "white",
   },
   header: {
-    background: "linear-gradient(to bottom right, black, #1F3F3D)",
+    webkitBackfaceVisibility: "hidden",
+    background: "linear-gradient(to bottom, black, #1F3F3D)",
     minHeight: "100vh",
     display: "flex",
     flexDirection: "column",
