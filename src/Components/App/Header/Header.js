@@ -29,18 +29,19 @@ class Header extends Component {
 
 const styles = {
   cursor: {
-    color: "white",
+    color: "black",
   },
   header: {
     webkitBackfaceVisibility: "hidden",
-    background: "linear-gradient(to bottom, black, #1F3F3D)",
+    // background: "linear-gradient(to bottom, black, #1F3F3D)",
+    background: "white",
     minHeight: "100vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
     fontSize: "calc(10px + 2vmin)",
-    color: "white",
+    color: "black",
   },
   subtitle: {
     height: "calc(10px + 2vmin)"

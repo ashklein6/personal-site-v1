@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactPageScroller from 'react-page-scroller';
+import { withStyles } from '@material-ui/core/styles';
 import Header from './Header/Header';
 import AboutMe from './AboutMe/AboutMe';
 import './App.css';
@@ -13,16 +14,24 @@ class App extends Component {
     this._pageScroller = null;
   }
 
-  goToPage = (eventKey) => {
-    this._pageScroller.goToPage(eventKey);
-  }
-
   pageOnChange = (number) => {
     this.setState({ currentPage: number });
+    console.log('on page:', this.state.currentPage);
+  }
+
+  scrollDown = () => {
+    let newPage = this.state.currentPage;
+    this._pageScroller.goToPage(newPage);
+  }
+
+  scrollUp = () => {
+    let newPage = this.state.currentPage-2;
+    console.log('new page attempt:', newPage);
+    this._pageScroller.goToPage(newPage);
   }
 
   render() {
-    // const pagesNumbers = this.getPagesNumbers();
+    const { classes } = this.props;
 
     return (
       <div className="Center">
@@ -31,17 +40,34 @@ class App extends Component {
             <Header />
             <AboutMe />
           </ReactPageScroller>
+          {(this.state.currentPage > 1) ? 
+          <div className={classes.scrollUp} onClick={() => this.scrollUp()}>
+            &#x25B2;
+          </div> : null }
+          <div className={classes.scrollDown} onClick={() => this.scrollDown()}>
+            &#x25BC;
+          </div>
         </React.Fragment>
-        {/* <Header />
-        <AboutMe /> */}
-        {/* <div className="App-header2">
-          <h1>
-            Ashley Klein
-          </h1>
-        </div> */}
       </div>
     );
   }
 }
 
-export default App;
+const styles = {
+  scrollDown: {
+    position: 'fixed',
+    bottom: '5%',
+    justifyContent: 'center',
+    left: '50%',
+    transform: 'translate(-50%, 0)',
+  },
+  scrollUp: {
+    position: 'fixed',
+    top: '5%',
+    justifyContent: 'center',
+    left: '50%',
+    transform: 'translate(-50%, 0)',
+  }
+};
+
+export default withStyles(styles)(App);
