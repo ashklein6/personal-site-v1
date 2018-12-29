@@ -139,13 +139,6 @@ const styles = {
     display: 'inline-block',
     fontWeight: 'bold'
   },
-  subtitle: {
-    display: "flex",
-    align: "center",
-    marginLeft: "auto",
-    marginRight: "auto",
-    minHeight: "25%vh"
-  },
   text: {
     display: 'inline-block',
     color: 'black'

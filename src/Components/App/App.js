@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { HashRouter as Router, Route, Redirect } from 'react-router-dom';
 import ReactPageScroller from 'react-page-scroller';
 import { withStyles } from '@material-ui/core/styles';
 import Header from './Header/Header';
 import AboutMe from './AboutMe/AboutMe';
+import Experience from './Experience/Experience';
 import './App.css';
 
 class App extends Component {
@@ -34,9 +36,12 @@ class App extends Component {
     const { classes } = this.props;
 
     return (
-      <div className="Center">
+      <Router>
+        <Redirect exact from="/" to="/home" />
+        <Route exact path="/home" component={}/>
         <React.Fragment>
           <ReactPageScroller ref={c => this._pageScroller = c} pageOnChange={this.pageOnChange}>
+            <Experience />
             <Header />
             <AboutMe />
           </ReactPageScroller>
@@ -48,7 +53,7 @@ class App extends Component {
             &#x25BC;
           </div>
         </React.Fragment>
-      </div>
+      </Router>
     );
   }
 }
