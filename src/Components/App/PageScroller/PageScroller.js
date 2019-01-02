@@ -36,9 +36,9 @@ class PageScroller extends Component {
     return (
       <React.Fragment>
         <ReactPageScroller ref={c => this._pageScroller = c} pageOnChange={this.pageOnChange}>
-          <Experience />
           <Header />
           <AboutMe />
+          <Experience />
         </ReactPageScroller>
         {(this.state.currentPage > 1) ? 
         <div className={classes.scrollUp} onClick={() => this.scrollUp()}>
