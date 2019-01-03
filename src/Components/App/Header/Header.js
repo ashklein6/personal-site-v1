@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Typing from 'react-typing-animation';
 import Fade from 'react-reveal/Fade';
+import Octicon from 'react-octicon';
+import { FaLinkedin } from 'react-icons/fa';
+import { GoMarkGithub } from 'react-icons/go';
 
 class Header extends Component {
   render() {
@@ -21,6 +24,13 @@ class Header extends Component {
                 <Typing.Backspace count={28} delay={5000} />
               </h3>
             </Typing>
+          </div>
+          <div className={classes.icons}>
+            <Fade bottom delay={5000} duration={2000}>
+              <Octicon mega name="mark-github" className={classes.info}/>
+              <FaLinkedin className={classes.icon}/>
+              <GoMarkGithub className={classes.icon}/>
+            </Fade>
           </div>
         </div>
     );
@@ -42,6 +52,16 @@ const styles = {
     justifyContent: "center",
     fontSize: "calc(10px + 2vmin)",
     color: "black",
+  },
+  icon: {
+    display: 'inline-block'
+  },
+  icons: {
+    position: 'fixed',
+    bottom: '15%',
+    justifyContent: 'center',
+    left: '50%',
+    transform: 'translate(-50%, 0)',
   },
   subtitle: {
     height: "calc(10px + 2vmin)"

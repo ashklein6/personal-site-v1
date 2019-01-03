@@ -3,7 +3,7 @@ import ReactPageScroller from 'react-page-scroller';
 import { withStyles } from '@material-ui/core/styles';
 import Header from '../Header/Header';
 import AboutMe from '../AboutMe/AboutMe'
-import Experience from '../Experience/Experience';
+import Education from '../Education/Education';
 
 class PageScroller extends Component {
   constructor(props) {
@@ -38,7 +38,7 @@ class PageScroller extends Component {
         <ReactPageScroller ref={c => this._pageScroller = c} pageOnChange={this.pageOnChange}>
           <Header />
           <AboutMe />
-          <Experience />
+          <Education />
         </ReactPageScroller>
         {(this.state.currentPage > 1) ? 
         <div className={classes.scrollUp} onClick={() => this.scrollUp()}>
