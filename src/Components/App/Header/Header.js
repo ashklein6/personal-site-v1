@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import ReactDOM from 'react-dom';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Typing from 'react-typing-animation';
 import Fade from 'react-reveal/Fade';
-import Octicon from 'react-octicon';
-import { FaLinkedin } from 'react-icons/fa';
-import { GoMarkGithub } from 'react-icons/go';
+import Tooltip from '@material-ui/core/Tooltip';
+import IconButton from '@material-ui/core/IconButton';
+import { IconContext } from "react-icons";
+import { FaLinkedin, FaEnvelopeSquare, FaGithubSquare } from 'react-icons/fa';
 
 class Header extends Component {
+
   render() {
     const { classes } = this.props;
 
@@ -27,9 +31,33 @@ class Header extends Component {
           </div>
           <div className={classes.icons}>
             <Fade bottom delay={5000} duration={2000}>
-              <Octicon mega name="mark-github" className={classes.info}/>
-              <FaLinkedin className={classes.icon}/>
-              <GoMarkGithub className={classes.icon}/>
+              <IconContext.Provider value={{ color: "black", size: "1.5em" }}>
+                <div>
+                  <div className={classes.icon}>
+                    <a href="https://www.linkedin.com/in/kleinashley/" target="_blank">
+                      <IconButton aria-label="Envelope" classes={{root: classes.iconButton}}>
+                        <FaLinkedin />
+                      </IconButton>
+                    </a>
+                  </div>
+                  <div className={classes.icon}>
+                    <a href="https://github.com/ashklein6" target="_blank">
+                      <IconButton aria-label="Envelope" classes={{root: classes.iconButton}}>
+                        <FaGithubSquare />
+                      </IconButton>
+                    </a>
+                  </div>
+                  <div className={classes.icon}>
+                    <Tooltip title={'Click to copy my email address to your clipboard!'}>
+                      <CopyToClipboard onCopy={this.onCopy} text={'ashklein6@gmail.com'}>
+                        <IconButton aria-label="Envelope" classes={{root: classes.iconButton}}>
+                          <FaEnvelopeSquare />
+                        </IconButton>
+                      </CopyToClipboard>
+                    </Tooltip>
+                  </div>
+                </div>
+              </IconContext.Provider>
             </Fade>
           </div>
         </div>
@@ -54,7 +82,13 @@ const styles = {
     color: "black",
   },
   icon: {
+    marginLeft: 10,
+    marginRight: 10,
     display: 'inline-block'
+  },
+  iconButton: {
+    padding: 5,
+    borderRadius: 5,
   },
   icons: {
     position: 'fixed',

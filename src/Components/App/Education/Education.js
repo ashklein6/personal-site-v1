@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Zoom from 'react-reveal/Fade';
+import { IconContext } from "react-icons";
+import { FaGraduationCap } from 'react-icons/fa';
 
 class Education extends Component {
   render() {
@@ -10,6 +12,9 @@ class Education extends Component {
         <Zoom delay={1000} duration={2000}>
           <div className={classes.education}>
             <div className={classes.card}>
+              <IconContext.Provider value={{ color: "black", size: "2em" }}>
+                <FaGraduationCap />
+              </IconContext.Provider>
               <h2 className={classes.header}>Education</h2>
               <section className={classes.section}>
                 <h3 className={classes.h3}>Prime Digital Academy</h3>
@@ -53,6 +58,7 @@ const styles = {
   header: {
     textAlign: 'center',
     fontSize: "calc(15px + 2vmin)",
+    marginTop: 5
   },
   h3: {
     fontSize: "calc(10px + 2vmin)",
