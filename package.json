@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^3.6.1",
     "react": "^16.6.3",
+    "react-animated-slider": "^1.1.4",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.7.0",
     "react-icons": "^3.2.2",

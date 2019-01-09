@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Header from '../Header/Header';
 import AboutMe from '../AboutMe/AboutMe'
 import Education from '../Education/Education';
+import Portfolio from '../Portfolio/Portfolio';
 
 class PageScroller extends Component {
   constructor(props) {
@@ -39,6 +40,7 @@ class PageScroller extends Component {
           <Header />
           <AboutMe />
           <Education />
+          <Portfolio />
         </ReactPageScroller>
         {(this.state.currentPage > 1) ? 
         <div className={classes.scrollUp} onClick={() => this.scrollUp()}>
