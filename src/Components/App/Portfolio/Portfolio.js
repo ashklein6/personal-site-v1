@@ -48,9 +48,6 @@ class Portfolio extends Component {
         <Zoom delay={1000} duration={2000}>
           <div className={classes.education}>
             <div className={classes.card}>
-              <IconContext.Provider value={{ color: "black", size: "2em" }}>
-                <FaGraduationCap />
-              </IconContext.Provider>
               <h2 className={classes.header}>Portfolio</h2>
               <Slider infinite autoplay={5000}>
                 {content.map((article, index) => <div key={index}>
@@ -86,7 +83,7 @@ const styles = {
   card: {
     margin: '7%',
     padding: 20,
-    borderStyle: 'solid',
+    // borderStyle: 'solid',
     textAlign: 'center',
     width: 'calc(86% - 20px)',
     height: '90%'

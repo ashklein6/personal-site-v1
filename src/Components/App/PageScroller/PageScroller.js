@@ -5,6 +5,10 @@ import Header from '../Header/Header';
 import AboutMe from '../AboutMe/AboutMe'
 import Education from '../Education/Education';
 import Portfolio from '../Portfolio/Portfolio';
+import Resources from '../Resources/Resources';
+import { IconContext } from "react-icons";
+import { FaChevronUp, FaChevronDown } from 'react-icons/fa';
+import Fade from 'react-reveal/Fade';
 
 class PageScroller extends Component {
   constructor(props) {
@@ -41,14 +45,28 @@ class PageScroller extends Component {
           <AboutMe />
           <Education />
           <Portfolio />
+          <Resources />
         </ReactPageScroller>
         {(this.state.currentPage > 1) ? 
-        <div className={classes.scrollUp} onClick={() => this.scrollUp()}>
-          &#x25B2;
+        <div className={classes.scrollUp}>
+          <Fade top delay={500}>
+            <div onClick={() => this.scrollUp()}>
+              <IconContext.Provider value={{ color: "black", size: "2em" }}>
+                <FaChevronUp />
+              </IconContext.Provider>
+            </div> 
+          </Fade>
         </div> : null }
-        <div className={classes.scrollDown} onClick={() => this.scrollDown()}>
-          &#x25BC;
-        </div>
+        {(this.state.currentPage < 5) ? 
+        <div className={classes.scrollDown}>
+          <Fade bottom delay={500}>
+            <div onClick={() => this.scrollDown()}>
+              <IconContext.Provider value={{ color: "black", size: "2em" }}>
+                <FaChevronDown />
+              </IconContext.Provider>
+            </div>
+          </Fade>
+        </div> : null }
       </React.Fragment>
     );
   }
@@ -58,16 +76,14 @@ const styles = {
   scrollDown: {
     position: 'fixed',
     bottom: '5%',
-    justifyContent: 'center',
-    left: '50%',
-    transform: 'translate(-50%, 0)',
+    textAlign: 'center',
+    width: '100%'
   },
   scrollUp: {
     position: 'fixed',
     top: '5%',
-    justifyContent: 'center',
-    left: '50%',
-    transform: 'translate(-50%, 0)',
+    textAlign: 'center',
+    width: '100%'
   }
 };
 
