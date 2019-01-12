@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Zoom from 'react-reveal/Fade';
-import { IconContext } from "react-icons";
-import { FaGraduationCap } from 'react-icons/fa';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 import Chip from '@material-ui/core/Chip';
@@ -11,17 +9,20 @@ let content = [
 	{
 		title: 'ChillCal',
 		description:
-      'ChillCal is an anti-calendar application that focuses on free time rather than busy time. A connection-based app, users enter in times where they are available and their friends may request to “chill” during those times. Complete with a wintry, penguin theme, ChillCal will be a clean, easy-to-follow web-based mobile application.',
-    technologies: ['React Native','PostgreSQL'],
+      `ChillCal is an anti-calendar application that focuses on free time rather than busy time. A 
+      connection-based app, users enter in times where they are available and their friends may 
+      request to “chill” during those times. Complete with a wintry, penguin theme, ChillCal is a 
+      clean, easy-to-follow web-based mobile application.`,
+    technologies: ['React Native', 'React', 'Redux', 'Saga', 'React-Native-Modal-DateTime-Picker', 'Node.js', 'Express.js','PostgreSQL'],
 		button: 'Read More',
 		image: 'https://i.imgur.com/ZXBtVw7.jpg',
-		user: 'Daniel',
-		userProfile: 'https://s7.postimg.cc/abavelo3v/1_3x.png',
 	},
 	{
-		title: 'Tortor Dapibus',
+		title: `Marnita's Table`,
 		description:
-      'Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.',
+      `This application for Marnita's Table displays the reports (360s) generated from Intentional 
+      Social Interactions (IZI). It allows visitors and clients to search through and view the 360s. 
+      The application also features a managing suite that allows Employees and Admins to create, edit, and publish 360s and control user viewing permissions.`,
     technologies: ['React.js','PostgreSQL'],
 		button: 'Discover',
 		image: 'https://i.imgur.com/DCdBXcq.jpg',

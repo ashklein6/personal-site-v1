@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import ReactDOM from 'react-dom';
+import { withRouter } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Typing from 'react-typing-animation';
 import Fade from 'react-reveal/Fade';
@@ -8,6 +8,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
 import { IconContext } from "react-icons";
 import { FaLinkedin, FaEnvelopeSquare, FaGithubSquare } from 'react-icons/fa';
+import { MdAccountBox } from 'react-icons/md';
 
 class Header extends Component {
 
@@ -31,33 +32,42 @@ class Header extends Component {
           </div>
           <div className={classes.icons}>
             <Fade bottom delay={5000} duration={2000}>
-              <IconContext.Provider value={{ color: "black", size: "1.5em" }}>
                 <div>
-                  <div className={classes.icon}>
-                    <a href="https://www.linkedin.com/in/kleinashley/" target="_blank">
-                      <IconButton aria-label="Envelope" classes={{root: classes.iconButton}}>
-                        <FaLinkedin />
-                      </IconButton>
-                    </a>
-                  </div>
-                  <div className={classes.icon}>
-                    <a href="https://github.com/ashklein6" target="_blank">
-                      <IconButton aria-label="Envelope" classes={{root: classes.iconButton}}>
-                        <FaGithubSquare />
-                      </IconButton>
-                    </a>
-                  </div>
-                  <div className={classes.icon}>
-                    <Tooltip title={'Click to copy my email address to your clipboard!'}>
-                      <CopyToClipboard onCopy={this.onCopy} text={'ashklein6@gmail.com'}>
-                        <IconButton aria-label="Envelope" classes={{root: classes.iconButton}}>
-                          <FaEnvelopeSquare />
+                  <IconContext.Provider value={{ color: "black", size: "1.75em" }}>
+                    <div className={classes.icon}>
+                      <Tooltip title={'Click to go to my resume!'}>
+                          <IconButton aria-label="resume" onClick={() => this.props.history.push("/resume")} classes={{root: classes.iconButton}}>
+                            <MdAccountBox />
+                          </IconButton>
+                      </Tooltip>
+                    </div>
+                  </IconContext.Provider>
+                  <IconContext.Provider value={{ color: "black", size: "1.5em" }}>
+                    <div className={classes.icon}>
+                      <a href="https://www.linkedin.com/in/kleinashley/" target="_blank" rel="noopener noreferrer">
+                        <IconButton aria-label="linked-in" classes={{root: classes.iconButton}}>
+                          <FaLinkedin />
                         </IconButton>
-                      </CopyToClipboard>
-                    </Tooltip>
-                  </div>
+                      </a>
+                    </div>
+                    <div className={classes.icon}>
+                      <a href="https://github.com/ashklein6" target="_blank" rel="noopener noreferrer">
+                        <IconButton aria-label="github" classes={{root: classes.iconButton}}>
+                          <FaGithubSquare />
+                        </IconButton>
+                      </a>
+                    </div>
+                    <div className={classes.icon}>
+                      <Tooltip title={'Click to copy my email address to your clipboard!'}>
+                        <CopyToClipboard text={'ashklein6@gmail.com'}>
+                          <IconButton aria-label="envelope" classes={{root: classes.iconButton}}>
+                            <FaEnvelopeSquare />
+                          </IconButton>
+                        </CopyToClipboard>
+                      </Tooltip>
+                    </div>
+                  </IconContext.Provider>
                 </div>
-              </IconContext.Provider>
             </Fade>
           </div>
         </div>
@@ -102,4 +112,4 @@ const styles = {
   }
 };
 
-export default withStyles(styles)(Header);
+export default withRouter(withStyles(styles)(Header));
