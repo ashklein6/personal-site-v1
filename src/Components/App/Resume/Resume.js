@@ -7,6 +7,8 @@ import Education from './Sections/Education';
 import WorkExperience from './Sections/WorkExperience';
 import Interests from './Sections/Interests';
 
+import './Print.css'
+
 class Resume extends Component {
   render() {
     const { classes } = this.props;
@@ -51,9 +53,9 @@ const styles = {
   header: {
     textAlign: 'center',
     fontSize: "calc(15px + 5vmin)",
-    marginTop: 20,
     letterSpacing: '0.5em',
-    fontWeight: 'normal'
+    fontWeight: 'normal',
+    marginTop: 25
   },
   h3: {
     fontSize: "calc(10px + 2vmin)",

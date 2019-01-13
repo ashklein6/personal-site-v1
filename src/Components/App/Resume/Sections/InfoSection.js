@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 import Tooltip from '@material-ui/core/Tooltip';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import IconButton from '@material-ui/core/IconButton';
@@ -16,11 +17,11 @@ class InfoSection extends Component {
         <IconContext.Provider value={{ color: "black", size: "1.5em" }}>
           <div>
             <div className={classes.icon}>
-              <a href="https://localhost:3001/" target="_blank" rel="noopener noreferrer">
+              <Link to="/" target="_blank">
                 <IconButton aria-label="Envelope" classes={{root: classes.iconButton}}>
                   <FaDesktop /><h3 className={classes.info}>home.ashleyklein.me</h3>
                 </IconButton>
-              </a>
+              </Link>
             </div>
             <div className={classes.icon}>
               <a href="https://www.linkedin.com/in/kleinashley/" target="_blank" rel="noopener noreferrer">

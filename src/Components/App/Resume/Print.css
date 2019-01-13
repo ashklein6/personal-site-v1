@@ -1,0 +1,4 @@
+@media print {
+  @page { margin: 0; }
+  body {transform: scale(.95);}
+}

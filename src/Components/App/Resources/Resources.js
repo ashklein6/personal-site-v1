@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Fade from 'react-reveal/Fade';
+import { Link } from 'react-router-dom';
 
 class Resources extends Component {
   render() {
@@ -11,7 +12,7 @@ class Resources extends Component {
           <div className={classes.resources}>
             <div className={classes.card}>
               <h2 className={classes.header}>Resources</h2>
-              <p>Take a peek at my <a href="http://localhost:3001/#/resume" target="_blank" rel="noopener noreferrer">resume.</a></p>
+              <p>Take a peek at my <Link to="/resume" target="_blank">resume.</Link></p>
               <p>Here's a link to my <a href="https://www.linkedin.com/in/kleinashley/" target="_blank" rel="noopener noreferrer">LinkedIn</a>. Let's connect!</p>
               <p>My <a href="https://github.com/ashklein6/" target="_blank" rel="noopener noreferrer">GitHub</a> features some interesting projects I've been working on.</p>
               <p>(Including this application, which is <a href="https://github.com/ashklein6/personal-site" target="_blank" rel="noopener noreferrer">open-sourced.)</a></p>
