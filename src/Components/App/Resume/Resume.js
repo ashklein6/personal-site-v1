@@ -48,9 +48,6 @@ class Resume extends Component {
 }
 
 const styles = {
-  date: {
-    margin: '0.5vmin',
-  },
   mobileResume: {
     margin: '5%'
   },
@@ -60,35 +57,6 @@ const styles = {
     letterSpacing: '0.5em',
     fontWeight: 'normal',
     marginTop: 25
-  },
-  h3: {
-    fontSize: "calc(10px + 2vmin)",
-    marginBottom: '0.25vmin',
-    letterSpacing: '0.05em',
-  },
-  h4: {
-    fontSize: "calc(8px + 2vmin)",
-    margin: '0.25vmin',
-    fontStyle: 'italic',
-    fontWeight: 'normal'
-  },
-  info: {
-    fontSize: "calc(10px + 2vmin)",
-    marginBottom: '1vmin',
-    marginTop: '1vmin',
-    letterSpacing: '0.05em',
-    textAlign: 'right',
-    display: 'inline-block'
-  },
-  infoDiv: {
-    display: 'inline-flex',
-    alignItems: 'center'
-  },
-  infoSection: {
-    marginTop: 'calc(5px + 2vmin)'
-  },
-  inline: {
-    display: 'inline-block'
   },
   leftSection: {
     borderRight: '1px solid grey',

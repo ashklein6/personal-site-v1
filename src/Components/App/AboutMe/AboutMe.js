@@ -119,9 +119,6 @@ const styles = {
   block: {
     display: 'block',
   },
-  cursor: {
-    color: "white",
-  },
   highlightedText: {
     display: 'inline-block',
     color: 'black',

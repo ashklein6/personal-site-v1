@@ -36,7 +36,6 @@ class Education extends Component {
 const styles = {
   education: {
     webkitBackfaceVisibility: "hidden",
-    // background: "linear-gradient(to bottom, #1F3F3D, #a5b2b1)",
     background: "white",
     minHeight: "100vh",
     display: "flex",

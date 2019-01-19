@@ -172,13 +172,6 @@ const styles = {
     width: 'calc(86% - 20px)',
     height: '90%'
   },
-  chip: {
-    margin: '5px 5px 0px 5px',
-    borderColor: '#272727'
-  },
-  date: {
-    margin: '1vmin'
-  },
   divProject: {
     position: 'relative',
     textAlign: 'center',
@@ -190,42 +183,16 @@ const styles = {
     left: '50%',
     transform: 'translate(-50%, -50%)'
   },
-  fab : {
-    backgroundColor: '#272727',
-    color: 'white',
-    '&:hover': {
-      backgroundColor: 'black'
-    }
-  },
   header: {
     textAlign: 'center',
     fontSize: "calc(15px + 2vmin)",
     marginTop: 5
-  },
-  h3: {
-    fontSize: "calc(10px + 2vmin)",
-    marginBottom: '1vmin'
-  },
-  h4: {
-    fontSize: "calc(8px + 2vmin)",
-    margin: '0.5vmin',
-    marginBottom: 0,
-    fontStyle: 'italic',
-    fontWeight: 'normal'
   },
   image: {
     maxWidth: '100%',
     maxHeight: '100%',
     objectFit: 'contain'
   },
-  section: {
-    marginTop: '10%',
-    marginBottom: '10%'
-  },
-  slider: {
-    flexGrow: 1,
-    backgroundColor: 'red'
-  }
 };
 
 export default withStyles(styles)(Portfolio);

@@ -53,33 +53,15 @@ const styles = {
     borderStyle: 'solid',
     textAlign: 'center',
   },
-  date: {
-    margin: '1vmin'
-  },
   header: {
     textAlign: 'center',
     fontSize: "calc(15px + 2vmin)",
     marginTop: 5
   },
-  h3: {
-    fontSize: "calc(10px + 2vmin)",
-    marginBottom: '1vmin'
-  },
-  h4: {
-    fontSize: "calc(8px + 2vmin)",
-    margin: '0.5vmin',
-    marginBottom: 0,
-    fontStyle: 'italic',
-    fontWeight: 'normal'
-  },
   link: {
     color: 'darkgrey',
     fontWeight: 600
   },
-  section: {
-    marginTop: '10%',
-    marginBottom: '10%'
-  }
 };
 
 export default withStyles(styles)(Resources);
