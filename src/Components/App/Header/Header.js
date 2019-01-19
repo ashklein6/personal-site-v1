@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { isMobile } from 'react-device-detect';
 import { withStyles } from '@material-ui/core/styles';
 import { withRouter } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
@@ -30,13 +31,13 @@ class Header extends Component {
               </h3>
             </Typing>
           </div>
-          <div className={classes.icons}>
+          <div className={ isMobile ? classes.iconsMobile : classes.icons}>
             <Fade bottom delay={5000} duration={2000}>
                 <div>
                   <IconContext.Provider value={{ color: "black", size: "1.75em" }}>
                     <div className={classes.icon}>
                       <Tooltip title={'Click to go to my resume!'}>
-                          <IconButton aria-label="resume" onClick={() => this.props.history.push("/resume")} classes={{root: classes.iconButton}}>
+                          <IconButton aria-label="resume" onClick={() => this.props.history.push("/resume")} classes={{root: classes.iconButton2}}>
                             <MdAccountBox />
                           </IconButton>
                       </Tooltip>
@@ -45,16 +46,20 @@ class Header extends Component {
                   <IconContext.Provider value={{ color: "black", size: "1.5em" }}>
                     <div className={classes.icon}>
                       <a href="https://www.linkedin.com/in/kleinashley/" target="_blank" rel="noopener noreferrer">
-                        <IconButton aria-label="linked-in" classes={{root: classes.iconButton}}>
-                          <FaLinkedin />
-                        </IconButton>
+                        <Tooltip title={'Click to check out my LinkedIn!'}>
+                          <IconButton aria-label="linked-in" classes={{root: classes.iconButton}}>
+                            <FaLinkedin />
+                          </IconButton>
+                        </Tooltip>
                       </a>
                     </div>
                     <div className={classes.icon}>
                       <a href="https://github.com/ashklein6" target="_blank" rel="noopener noreferrer">
-                        <IconButton aria-label="github" classes={{root: classes.iconButton}}>
-                          <FaGithubSquare />
-                        </IconButton>
+                        <Tooltip title={'Click to visit my GitHub!'}>
+                          <IconButton aria-label="github" classes={{root: classes.iconButton}}>
+                            <FaGithubSquare />
+                          </IconButton>
+                        </Tooltip>
                       </a>
                     </div>
                     <div className={classes.icon}>
@@ -81,7 +86,6 @@ const styles = {
   },
   header: {
     webkitBackfaceVisibility: "hidden",
-    // background: "linear-gradient(to bottom, black, #1F3F3D)",
     background: "white",
     minHeight: "100vh",
     display: "flex",
@@ -100,12 +104,22 @@ const styles = {
     padding: 5,
     borderRadius: 5,
   },
+  iconButton2: {
+    padding: 3,
+    borderRadius: 5,
+  },
   icons: {
     position: 'fixed',
     bottom: '15%',
     justifyContent: 'center',
     left: '50%',
     transform: 'translate(-50%, 0)',
+    textAlign: 'center'
+  },
+  iconsMobile: {
+    justifyContent: 'center',
+    textAlign: 'center',
+    marginTop: '20%'
   },
   subtitle: {
     height: "calc(10px + 2vmin)"

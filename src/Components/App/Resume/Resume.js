@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { isMobile } from 'react-device-detect';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import InfoSection from './Sections/InfoSection';
@@ -18,15 +19,27 @@ class Resume extends Component {
         <Grid item xs={12}> 
           <h2 className={classes.header}>ASHLEY KLEIN</h2>
           <Grid container justify="center" spacing={24}>
-            <Grid item xs={12} sm={4} className={classes.leftSection}>
+          { isMobile ? 
+            <div className={classes.mobileResume}>
               <InfoSection />
               <Technologies />
               <Education />
-              <Interests />
-            </Grid>
-            <Grid item xs={12} sm={8}>
               <WorkExperience />
-            </Grid>
+              <Interests />
+            </div>
+          :
+            <React.Fragment>
+              <Grid item xs={12} sm={4} className={classes.leftSection}>
+                <InfoSection />
+                <Technologies />
+                <Education />
+                <Interests />
+              </Grid>
+              <Grid item xs={12} sm={8}>
+                <WorkExperience />
+              </Grid>
+            </React.Fragment>
+          }
           </Grid>
         </Grid>
       </Grid>
@@ -38,17 +51,8 @@ const styles = {
   date: {
     margin: '0.5vmin',
   },
-  experience: {
-    webkitBackfaceVisibility: "hidden",
-    // background: "linear-gradient(to bottom, #1F3F3D, #a5b2b1)",
-    background: "white",
-    minHeight: "100vh",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "black",
-    textAlign: 'left'
+  mobileResume: {
+    margin: '5%'
   },
   header: {
     textAlign: 'center',

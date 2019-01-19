@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import { isMobile } from 'react-device-detect';
 
 class WorkExperience extends Component {
   render() {
     const { classes } = this.props;
 
     return (
-      <div className={classes.divContainer}>
-        <h3 className={classes.header}>WORK EXPERIENCE</h3>
+      <div className={isMobile ? classes.divContainerMobile : classes.divContainer}>
+        <h3 className={isMobile ? classes.headerMobile : classes.header}>WORK EXPERIENCE</h3>
         {/* <div className={classes.divSections}> */}
           <section className={classes.section}>
             <h3 className={classes.h3}>Prime Digital Academy</h3>
@@ -78,6 +79,11 @@ const styles = {
     flexDirection: 'column',
     alignContent: 'space-between'
   },
+  divContainerMobile: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignContent: 'space-between'
+  },
   h3: {
     fontSize: "calc(12px + 1vmin)",
     marginBottom: '0.25vmin',
@@ -99,6 +105,13 @@ const styles = {
     fontWeight: 'normal',
     letterSpacing: '0.2em',
     flexGrow: 1
+  },
+  headerMobile: {
+    fontSize: "calc(10px + 2vmin)",
+    marginBottom: 'calc(0.25vmin + 16px)',
+    textAlign: 'center',
+    fontWeight: 'normal',
+    letterSpacing: '0.2em',
   },
   section: {
     flexGrow: 1

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { isMobile } from 'react-device-detect';
 import { withStyles } from '@material-ui/core/styles';
 import Fade from 'react-reveal/Fade';
 
@@ -7,24 +8,7 @@ class AboutMe extends Component {
     const { classes } = this.props;
 
     return (
-          <div className={classes.aboutMe}>
-            {/* <h5 className={classes.bio}>
-            Greetings! My name is Ashley Klein and I am a hard-working 
-            mechanical-engineer-turned-software-developer that thrives
-            in a fast-paced environment and is driven by the desire to
-            design creative, efficient, and robust solutions. I enjoy
-            each stage of the development process with a focus on 
-            collaboration and an appetite for learning.
-            <br></br><br></br>
-            After completing college, I worked as a Mechanical Engineer 
-            in the pharmaceutical industry at NorthStar Medical, a company 
-            that develops nuclear radioisotopes. Working in this position, 
-            I discovered a passion for software development and all-things 
-            logic-based and decided to pursue a career in the software realm.
-            I enrolled in Prime Digital Academy, a 20-week full-time immersive 
-            program, to enhance my programming skills and begin my transition 
-            into software engineering.
-            </h5> */}
+          <div className={ isMobile ? classes.aboutMeMobile : classes.aboutMe }>
             <span className={classes.block}>
               <Fade delay={500} duration={2000}>
                 <div className={classes.text}>
@@ -111,9 +95,19 @@ class AboutMe extends Component {
 const styles = {
   aboutMe: {
     webkitBackfaceVisibility: "hidden",
-    // background: "linear-gradient(to bottom, #1F3F3D, #a5b2b1)",
     background: "white",
     minHeight: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    justifyContent: "center",
+    fontSize: "calc(15px + 2vmin)",
+    color: "black",
+    padding: 80
+  },
+  aboutMeMobile: {
+    webkitBackfaceVisibility: "hidden",
+    background: "white",
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
