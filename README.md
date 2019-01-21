@@ -1,10 +1,19 @@
 # Personal Site
 
-This is an application created with React that will be deployed as my personal site. It features a animations and page-scrolling to display information in a clean and concise way.
+This is an application created with React that will be deployed as my personal site at [ashleyklein.me](http://www.ashleyklein.me). It features a animations and page-scrolling to display information in a clean and concise way.
 
 ## Built With
 
 JavaScript, Node.js, React, Material-UI
+
+## Screenshots
+Header and About Me:
+
+![header](screenshots/header.gif)
+
+Portfolio:
+
+![portfolio](screenshots/portfolio.gif)
 
 ## Getting Started
 
