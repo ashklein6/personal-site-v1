@@ -87,13 +87,14 @@ const styles = {
   header: {
     webkitBackfaceVisibility: "hidden",
     background: "white",
-    minHeight: "100vh",
+    height: "100vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
     fontSize: "calc(10px + 2vmin)",
     color: "black",
+    overflow: "visible"
   },
   icon: {
     marginLeft: 10,
@@ -109,11 +110,12 @@ const styles = {
     borderRadius: 5,
   },
   icons: {
-    position: 'fixed',
-    bottom: '15%',
+    // position: 'fixed',
+    // bottom: '15%',
     justifyContent: 'center',
-    left: '50%',
-    transform: 'translate(-50%, 0)',
+    marginTop: '5%',
+    // left: '50%',
+    // transform: 'translate(-50%, 0)',
     textAlign: 'center'
   },
   iconsMobile: {

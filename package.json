@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.6.1",
+    "animate.css": "^3.7.0",
     "react": "^16.6.3",
+    "react-animated-css": "^1.0.4",
     "react-animated-slider": "^1.1.4",
     "react-copy-to-clipboard": "^5.0.1",
     "react-device-detect": "^1.6.1",

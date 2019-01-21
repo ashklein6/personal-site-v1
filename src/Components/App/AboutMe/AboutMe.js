@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade';
 class AboutMe extends Component {
   render() {
     const { classes } = this.props;
-
+    console.log('rendering about me');
     return (
           <div className={ isMobile ? classes.aboutMeMobile : classes.aboutMe }>
             <span className={classes.block}>
@@ -103,7 +103,7 @@ const styles = {
     justifyContent: "center",
     fontSize: "calc(15px + 2vmin)",
     color: "black",
-    padding: 80
+    padding: 80,
   },
   aboutMeMobile: {
     webkitBackfaceVisibility: "hidden",
