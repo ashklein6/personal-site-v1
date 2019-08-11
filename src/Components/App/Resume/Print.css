@@ -1,4 +1,14 @@
-@media print {
+/* @media print {
   @page { margin: 0; }
-  body {transform: scale(.90);}
+  body {transform: scale(.8);}
+} */
+
+@media print {
+  @page {
+    padding: 0mm;
+  }
+
+  body {
+    transform: scale(0.7);
+  }
 }

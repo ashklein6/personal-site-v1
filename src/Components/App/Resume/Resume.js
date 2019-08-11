@@ -60,6 +60,10 @@ const styles = {
   },
   leftSection: {
     borderRight: '1px solid grey',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    overflowX: 'hidden'
   }
 };
 

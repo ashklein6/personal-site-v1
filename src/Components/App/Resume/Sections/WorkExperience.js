@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { isMobile } from 'react-device-detect';
+import '../NoLink.css';
 
 class WorkExperience extends Component {
   render() {
@@ -11,13 +12,40 @@ class WorkExperience extends Component {
         <h3 className={isMobile ? classes.headerMobile : classes.header}>WORK EXPERIENCE</h3>
         {/* <div className={classes.divSections}> */}
           <section className={classes.section}>
+            <h3 className={classes.h3}>Runerra</h3>
+            <h4 className={classes.h4}>React-Native Developer</h4>
+            <p className={classes.date}>February 2019 - Present</p>
+            <ul>
+              <li>Worked on a mobile application that connected users with neighbors running errands.</li>
+              <li>Added menus capability to application and piloted app design standardization.</li>
+              <li>Scoped and executed front-end navigation infrastructure changes.</li>
+              <li>Executed complex deep link functionality that required verification of user parameters prior to navigation.</li>
+              <li>Collaborated with product team to plan future features of the mobile application.</li>
+              <li>Troubleshot website plug-ins using HTML, CSS, and JavaScript.</li>
+              <ul>
+                <li>Technologies used: React Native, React.js, Redux, RxJS, TypeScript, GraphQL, and PostgreSQL.</li>
+              </ul>
+            </ul>
+          </section>
+          <section className={classes.section}>
+            <h3 className={classes.h3}>Ashley Klein Photography</h3>
+            <h4 className={classes.h4}>Owner, Photographer</h4>
+            <p className={classes.date}>September 2018 - Present</p>
+            <ul>
+              <li>Demonstrate artistic vision while developing a unique and personal style.</li>
+              <li>Communicate with clients to coordinate and understand their needs.</li>
+              <li>Primary focus on portrait and wedding photography utilizing Adobe Lightroom.</li>
+              <li>Portfolio is available at <a href="https://ashleyklein.photography" target="_blank" rel="noopener noreferrer">www.ashleyklein.photography</a>.</li>
+            </ul>
+          </section>
+          <section className={classes.section}>
             <h3 className={classes.h3}>Prime Digital Academy</h3>
             <h4 className={classes.h4}>Full-Stack Software Engineering Student</h4>
             <p className={classes.date}>August 2018 - January 2019</p>
             <ul>
-              <li> Developed a mobile application independently that allowed users to connect withfriends to see their friends’ free times and easily make plans</li>
+              <li>Developed a mobile application independently that allowed users to connect with friends to see their friends’ free times and easily make plans</li>
               <ul>
-                <li> Technologies used: React Native, React.js, Redux, Sagas, Expo, Node.js, Express.js, Passport, and PostgreSQL.</li>
+                <li>Technologies used: React Native, React.js, Redux, Sagas, Expo, Node.js, Express.js, Passport, and PostgreSQL.</li>
               </ul>
               <li>Collaborated with 4 peers in an Agile environment to create a web application for Marnita’s Table, a nonprofit that seeks to close gaps across difference by intentionally including and valuing people who are traditionally unheard and excluded at the policy-making and resource-sharing table.</li>
               <ul>

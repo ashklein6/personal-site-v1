@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { isMobile } from 'react-device-detect';
 import { withStyles } from '@material-ui/core/styles';
 import Fade from 'react-reveal/Fade';
+import Headshot from '../Images/Headshot.jpg'
 
 class AboutMe extends Component {
   render() {
@@ -9,6 +10,7 @@ class AboutMe extends Component {
     console.log('rendering about me');
     return (
           <div className={ isMobile ? classes.aboutMeMobile : classes.aboutMe }>
+            {<Fade top={!isMobile} delay={4500} duration={2000}><img src={Headshot} alt="Headshot" className={classes.image}/></Fade>}
             <span className={classes.block}>
               <Fade delay={500} duration={2000}>
                 <div className={classes.text}>
@@ -129,6 +131,12 @@ const styles = {
     color: 'white',
     display: 'inline-block',
     fontWeight: 'bold'
+  },
+  image: {
+    height: 200,
+    width: 180,
+    marginBottom: 20,
+    borderRadius: 40
   },
   text: {
     display: 'inline-block',

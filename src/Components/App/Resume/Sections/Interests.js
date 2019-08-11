@@ -27,7 +27,7 @@ class Technologies extends Component {
           </Grid>
           <Grid item xs={6} className={classes.center}> 
             <Tooltip title={'Click to go to my photography website!'}>
-              <a href="https://github.com/ashklein6" target="_blank" rel="noopener noreferrer">
+              <a href="https://ashleyklein.photography" target="_blank" rel="noopener noreferrer">
                 <p className={classes.interest}><FaCamera />&nbsp;Photography</p>
               </a>
             </Tooltip>
@@ -58,7 +58,8 @@ const styles = {
   interest: {
     textAlign: 'center',
     textDecoration: 'none',
-    color: 'black'
+    color: 'black',
+    fontWeight: 'normal'
   }
 };
 
