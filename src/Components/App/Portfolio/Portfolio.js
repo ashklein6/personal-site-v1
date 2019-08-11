@@ -7,6 +7,7 @@ import './Portfolio.css';
 import chillcal from './Images/chillcal.png';
 import marnita_connect from './Images/marnita_connect.png';
 import personal_site from './Images/personal_site.png';
+import personal_site2 from './Images/personal_site2.png';
 
 let content = [
 	{
@@ -46,6 +47,17 @@ let content = [
       {text: 'View Personal Site GitHub', url: 'https://github.com/ashklein6/personal-site'}
     ],
     image: personal_site
+  },
+  {
+    title: `Personal Site 2`,
+    description:
+      `This is a work-in-progress on which I explored animations through the use of Three.js. It features a 
+      star/galaxy animation and a minimalist design.`,
+    technologies: ['Technologies used: React.js, Three.js, HTML, CSS'],
+    button: [
+      {text: 'View Personal Site 2 GitHub', url: 'https://github.com/ashklein6/ashley-klein'}
+    ],
+    image: personal_site2
   }
 ];
 
