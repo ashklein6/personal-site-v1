@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // route for SSL
-router.get('/.well-known/acme-challenge/GsKqG4-I874ezq9PLRam6OdIxn6oRlL_uIMEwt6dNJw', (req,res) => {
+app.get('/.well-known/acme-challenge/GsKqG4-I874ezq9PLRam6OdIxn6oRlL_uIMEwt6dNJw', (req,res) => {
   res.send('GsKqG4-I874ezq9PLRam6OdIxn6oRlL_uIMEwt6dNJw.8_Ho_ShpHwFZR4xuG7IliygeCybwky4eyeVUXvXCDpo')
 })
 
