@@ -5,10 +5,11 @@
 
 @media print {
   @page {
-    padding: 0mm;
+    margin: 0mm !important;
+    padding: 0mm !important;
   }
 
   body {
-    transform: scale(0.7);
+    height: auto;
   }
 }

@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
-const technologies = ['Arduino', 'Bootstrap', 'CSS', 'Express.js', 'GitHub', 'GraphQL', 'HTML', 'Java', 'JavaScript', 
-  'Jira', 'jQuery', 'Material UI', 'Mongo', 'Node.js', 'Passport', 'PostgreSQL', 'Postico', 'Postman', 'React.js',
-  'React Native', 'Redux', 'RxJS', 'Sagas', 'TypeScript']
+const technologies = ['Arduino', 'Bootstrap', 'CSS', 'EC2', 'Elastic Beanstalk', 'Express.js',
+  'GitHub', 'GraphQL', 'HTML', 'JavaScript', 'Jest', 'Jira', 'jQuery', 'Material UI', 'MongoDB',
+  'Node.js', 'Passport', 'PostgreSQL', 'Postico', 'Postman', 'React.js', 'React Native', 'Redux',
+  'RxJS', 'S3', 'Sagas', 'TypeORM', 'TypeScript']
 
 class Technologies extends Component {
   render() {

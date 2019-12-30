@@ -13,18 +13,16 @@ class WorkExperience extends Component {
         {/* <div className={classes.divSections}> */}
           <section className={classes.section}>
             <h3 className={classes.h3}>Runerra</h3>
-            <h4 className={classes.h4}>React-Native Developer</h4>
+            <h4 className={classes.h4}>Engineering Lead</h4>
             <p className={classes.date}>February 2019 - Present</p>
             <ul>
               <li>Worked on a mobile application that connected users with neighbors running errands.</li>
-              <li>Added menus capability to application and piloted app design standardization.</li>
+              <li>Added menus capability to application and piloted app design standardization, with a focus on accessibility.</li>
               <li>Scoped and executed front-end navigation infrastructure changes.</li>
+              <li>Managed deployment while maintaining test suites and incorporating a manual CI and CD pipeline.</li>
               <li>Executed complex deep link functionality that required verification of user parameters prior to navigation.</li>
               <li>Collaborated with product team to plan future features of the mobile application.</li>
-              <li>Troubleshot website plug-ins using HTML, CSS, and JavaScript.</li>
-              <ul>
-                <li>Technologies used: React Native, React.js, Redux, RxJS, TypeScript, GraphQL, and PostgreSQL.</li>
-              </ul>
+              <li>Technologies used: React Native, React.js, Redux, RxJS, TypeScript, GraphQL, and PostgreSQL.</li>
             </ul>
           </section>
           <section className={classes.section}>
