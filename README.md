@@ -2,6 +2,9 @@
 
 This is an application created with React that will be deployed as my personal site at [ashleyklein.me](http://www.ashleyklein.me). It features animations and page-scrolling to display information in a clean and concise way.
 
+## Security Note
+Waiting for release of `react-scripts@3.3.1` which includes [https://github.com/facebook/create-react-app/pull/8079]. The most recent version, 3.3.0, uses an insecure WebSocket connection that cannot be initiated from a page loaded over HTTPS.
+
 ## Built With
 
 JavaScript, Node.js, React, Material-UI
