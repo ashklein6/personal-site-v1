@@ -27,7 +27,7 @@ class Header extends Component {
             <Typing loop speed={100} count={29} cursorClassName={classes.cursor} startDelay={1500}>
               <h3>
                 Full-Stack Software Developer
-                <Typing.Backspace count={28} delay={5000} />
+                <Typing.Backspace count={29} delay={5000} />
               </h3>
             </Typing>
           </div>
