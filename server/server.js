@@ -3,6 +3,7 @@ require('dotenv').config();
 let app = express();
 
 app.use(express.static('build'));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/.well-known/acme-challenge/K_2RjEaeymUHc7iTWe-RdAFQjPLNdCdIuI1B2fnOpyk', (req, res)=>{
   res.send('K_2RjEaeymUHc7iTWe-RdAFQjPLNdCdIuI1B2fnOpyk.8QUstrwiUKpP7oZH0ycw6DC0Y1dZwoHI7v5syvojMU8');
