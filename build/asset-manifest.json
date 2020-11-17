@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.ad79fcfe.chunk.css",
-    "main.js": "/static/js/main.4e606b5c.chunk.js",
-    "main.js.map": "/static/js/main.4e606b5c.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ad213a2a.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ad213a2a.js.map",
-    "static/js/2.8f7af9c0.chunk.js": "/static/js/2.8f7af9c0.chunk.js",
-    "static/js/2.8f7af9c0.chunk.js.map": "/static/js/2.8f7af9c0.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.9d21fcf0763bda757570443c28b8c00d.js": "/precache-manifest.9d21fcf0763bda757570443c28b8c00d.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.ad79fcfe.chunk.css.map": "/static/css/main.ad79fcfe.chunk.css.map",
-    "static/js/2.8f7af9c0.chunk.js.LICENSE": "/static/js/2.8f7af9c0.chunk.js.LICENSE",
-    "static/media/Headshot.jpg": "/static/media/Headshot.b9bed54f.jpg",
-    "static/media/chillcal.png": "/static/media/chillcal.5272e093.png",
-    "static/media/marnita_connect.png": "/static/media/marnita_connect.50517588.png",
-    "static/media/personal_site.png": "/static/media/personal_site.50fd58f8.png",
-    "static/media/personal_site2.png": "/static/media/personal_site2.4a3be794.png"
+    "main.css": "/personal-site-v1/static/css/main.dcf9784f.chunk.css",
+    "main.js": "/personal-site-v1/static/js/main.0bd68cba.chunk.js",
+    "main.js.map": "/personal-site-v1/static/js/main.0bd68cba.chunk.js.map",
+    "runtime-main.js": "/personal-site-v1/static/js/runtime-main.ce0ff521.js",
+    "runtime-main.js.map": "/personal-site-v1/static/js/runtime-main.ce0ff521.js.map",
+    "static/js/2.8f7af9c0.chunk.js": "/personal-site-v1/static/js/2.8f7af9c0.chunk.js",
+    "static/js/2.8f7af9c0.chunk.js.map": "/personal-site-v1/static/js/2.8f7af9c0.chunk.js.map",
+    "index.html": "/personal-site-v1/index.html",
+    "precache-manifest.688a5d7ff7a3b9fcec139bcb2c87a748.js": "/personal-site-v1/precache-manifest.688a5d7ff7a3b9fcec139bcb2c87a748.js",
+    "service-worker.js": "/personal-site-v1/service-worker.js",
+    "static/css/main.dcf9784f.chunk.css.map": "/personal-site-v1/static/css/main.dcf9784f.chunk.css.map",
+    "static/js/2.8f7af9c0.chunk.js.LICENSE": "/personal-site-v1/static/js/2.8f7af9c0.chunk.js.LICENSE",
+    "static/media/Headshot.jpg": "/personal-site-v1/static/media/Headshot.b9bed54f.jpg",
+    "static/media/chillcal.png": "/personal-site-v1/static/media/chillcal.5272e093.png",
+    "static/media/marnita_connect.png": "/personal-site-v1/static/media/marnita_connect.50517588.png",
+    "static/media/personal_site.png": "/personal-site-v1/static/media/personal_site.50fd58f8.png",
+    "static/media/personal_site2.png": "/personal-site-v1/static/media/personal_site2.4a3be794.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ad213a2a.js",
+    "static/js/runtime-main.ce0ff521.js",
     "static/js/2.8f7af9c0.chunk.js",
-    "static/css/main.ad79fcfe.chunk.css",
-    "static/js/main.4e606b5c.chunk.js"
+    "static/css/main.dcf9784f.chunk.css",
+    "static/js/main.0bd68cba.chunk.js"
   ]
 }
