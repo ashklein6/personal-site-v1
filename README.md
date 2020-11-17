@@ -1,6 +1,6 @@
 # Personal Site
 
-This is an application created with React that will be deployed as my personal site at [ashleyklein.me](http://www.ashleyklein.me). It features animations and page-scrolling to display information in a clean and concise way.
+This is an application created with React to serve as a personal site. It can be viewed at [https://ashklein6.github.io/personal-site-v1/#/home](https://ashklein6.github.io/personal-site-v1/#/home). It features animations and page-scrolling to display information in a clean and concise way.
 
 ## Security Note
 Waiting for release of `react-scripts@3.3.1` which includes [https://github.com/facebook/create-react-app/pull/8079]. The most recent version, 3.3.0, uses an insecure WebSocket connection that cannot be initiated from a page loaded over HTTPS.

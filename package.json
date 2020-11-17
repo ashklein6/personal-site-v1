@@ -2,7 +2,7 @@
   "name": "personal-site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ashklein6.github.io/personal-site-v1",
+  "homepage": "https://ashklein6.github.io/personal-site-v1",
   "dependencies": {
     "@material-ui/core": "^3.6.1",
     "animate.css": "^3.7.0",
